@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+body {
+  font-family: 'Poppins', sans-serif; /* Added font-family here */
+}
+
+.navigation {
+  position: relative;
+  width: 450px;
+  height: 70px;
+  background: linear-gradient(45deg, #E6936D, #4F6277);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 36px; 
+  margin-bottom: 10px;
+  padding-top: 25px;
+}
+
+.navigation ul {
+  display: flex;
+  width: 350px;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 70px;
+  height: 79px;
+  list-style: none;
+  z-index: 1;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none; /* Remove underline */
+}
+
+.navigation ul li a .icon {
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+}
+
+.navigation ul li a .text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em; /* Increase the text size here */
+  letter-spacing: 0.05em;
+  opacity: 1; /* Make sure text is always visible */
+  transition: none; /* Remove transition */
+}
+
+.navigation ul li a .circle {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1.8px solid #fff;
+  transform: translateY(-37px) scale(0);
+}
+
+.indicator {
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 76px;
+  background: linear-gradient(45deg, #E6936D, #4F6277);
+  border: 4px solid #06021b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.indicator::before,
+.indicator::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+}
+
+.indicator::before {
+  top: 50%;
+  left: -22px;
+  border-top-right-radius: 20px;
+  box-shadow: 1px -10px 0 #06021b;
+}
+
+.indicator::after {
+  top: 50%;
+  right: -22px;
+  border-top-left-radius: 20px;
+  box-shadow: -1px -10px 0 #06021b;
+}
